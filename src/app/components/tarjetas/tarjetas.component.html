@@ -1,0 +1,18 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="card-columns mt-5 animated fadeIn" *ngIf="!loading">
+    <div class="card puntero" *ngFor="let item of items" (click)="verArtista(item)">
+        <img class="card-img-top " [src]="item.images | noimage " alt=" ">
+        <div class="card-body ">
+            <h5 class="card-title ">{{item.name}}</h5>
+            <p class="card-text" *ngIf="item.artists">
+                <span class="badge badge-pill badge-primary " *ngFor="let artista of item.artists ">
+                {{artista.name}}
+              </span>
+            </p>
+            <p class="card-text" *ngIf="item.genres">
+                <span class="badge badge-pill badge-primary" *ngFor="let genre of item.genres">
+                {{genre}}
+              </span>
+        </div>
+    </div>
+</div>

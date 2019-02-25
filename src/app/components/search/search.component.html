@@ -1,0 +1,9 @@
+<div class="row mt-5">
+    <div class="col-md-12">
+        <form novalidate autocomplete="off">
+            <input type="text" class="form-control form-lg" (keyup)="buscarArtista($event)" placeholder="Buscar artista ...">
+        </form>
+    </div>
+</div>
+
+<app-tarjetas [items]="artistas" [loading]="loading"></app-tarjetas>

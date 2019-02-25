@@ -1,0 +1,9 @@
+<div class="row mt-5">
+    <div class="col">
+        <div class="alert alert-danger animated fadeIn" role="alert" *ngIf="hasError">
+            <h4 class="alert-heading">Error</h4>
+            {{mensajeError}}
+        </div>
+    </div>
+</div>
+<app-tarjetas [items]="nuevasCanciones" [loading]="loading"></app-tarjetas>
